@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R&E Beneudys Repuestos | Repuestos para camiones y vehículos pesados</title>
+<meta name="description" content="Repuestos para camiones y vehículos pesados en Santo Domingo Oeste: Shacman, Sinotruk, Mack y Cummins. Llámanos al 809-766-4523 o escríbenos por WhatsApp.">
+<link rel="canonical" href="https://beneudysrepuestos.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="R&E Beneudys Repuestos">
+<meta property="og:description" content="Repuestos para camiones y vehículos pesados en Santo Domingo Oeste. Shacman, Sinotruk, Mack y Cummins.">
+<meta property="og:locale" content="es_DO">
+<meta name="theme-color" content="#141d35">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141d35'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='bold' fill='%23fff' text-anchor='middle'%3ER%26E%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #141d35;
+    --navy-dark: #0c1224;
+    --navy-light: #1f2a4d;
+    --white: #ffffff;
+    --silver: #c9d1d9;
+    --amber: #e8a33d;
+    --wa: #25d366;
+    --radius: 14px;
+    --shell: min(1120px, 100% - 48px);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, svg { max-width: 100%; display: block; }
+
+  /* Layout shell: every direct child of a section lines up on one grid */
+  .shell { width: var(--shell); margin-inline: auto; }
+
+  /* Accessible skip link */
+  .skip {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--amber);
+    color: var(--navy-dark);
+    padding: 12px 20px;
+    font-weight: 700;
+    border-radius: 0 0 8px 0;
+    z-index: 100;
+  }
+  .skip:focus { left: 0; }
+
+  :focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(12,18,36,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .brand img {
+    width: auto;
+    height: 52px;
+    flex-shrink: 0;
+  }
+
+  .brand-text { display: flex; flex-direction: column; line-height: 1.25; }
+  .brand-text strong { font-size: 1rem; font-weight: 800; letter-spacing: 0.01em; }
+  .brand-text span { font-size: 0.72rem; color: var(--silver); font-weight: 500; }
+
+  nav.main-nav { display: none; }
+
+  @media (min-width: 880px) {
+    nav.main-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-left: auto;
+    }
+    nav.main-nav a {
+      color: var(--silver);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: color 0.15s ease;
+    }
+    nav.main-nav a:hover { color: var(--white); }
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 13px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.15s ease, filter 0.15s ease;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  .btn-amber  { background: var(--amber); color: var(--navy-dark); }
+  .btn-wa     { background: var(--wa);    color: #06301a; }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1.5px solid rgba(255,255,255,0.35);
+  }
+
+  .header-cta { display: none; }
+  @media (min-width: 720px) { .header-cta { display: inline-flex; } }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 64px 0 72px;
+    background:
+      radial-gradient(ellipse 70% 60% at 70% 0%, rgba(31,42,77,0.9) 0%, transparent 70%),
+      var(--navy);
+    text-align: center;
+  }
+
+  /* transparent white emblem: no plate, it reads as a mark on the navy */
+  .hero-logo {
+    width: auto;
+    height: 200px;
+    margin: 0 auto 32px;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.45));
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    font-weight: 800;
+    max-width: 16ch;
+    margin: 0 auto 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+  }
+
+  .hero h1 em { color: var(--amber); font-style: normal; }
+
+  .hero .lede {
+    font-size: 1.12rem;
+    color: var(--silver);
+    max-width: 52ch;
+    margin: 0 auto 34px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  /* ---------- Value props ---------- */
+  .values {
+    background: var(--navy-dark);
+    border-block: 1px solid rgba(255,255,255,0.07);
+    padding: 40px 0;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  @media (min-width: 720px) {
+    .values-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  }
+
+  .value {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .value-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: rgba(232,163,61,0.14);
+    color: var(--amber);
+    display: grid;
+    place-items: center;
+  }
+  .value-icon svg { width: 20px; height: 20px; }
+
+  .value h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 3px; }
+  .value p  { font-size: 0.88rem; color: var(--silver); line-height: 1.5; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 76px 0; }
+
+  .section-eyebrow {
+    color: var(--amber);
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -0.015em;
+    margin-bottom: 12px;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: var(--silver);
+    max-width: 54ch;
+    margin: 0 auto 48px;
+  }
+
+  /* ---------- Marcas ---------- */
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  @media (min-width: 760px) {
+    .brands-grid { grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  }
+
+  .brand-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 26px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .brand-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+  }
+
+  /* fixed optical box so logos of different aspect ratios look the same weight */
+  .brand-logo {
+    height: 72px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* absolute caps: percentage heights don't constrain replaced elements reliably */
+  .brand-logo img {
+    max-height: 72px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .brand-name {
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #55607a;
+  }
+
+  /* ---------- Contacto ---------- */
+  #contacto { background: var(--navy-dark); }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  @media (min-width: 760px) {
+    .contact-layout { grid-template-columns: 1fr 1fr; }
+    .contact-card.is-wide { grid-column: 1 / -1; }
+  }
+
+  .contact-card {
+    background: var(--navy-light);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: var(--radius);
+    padding: 26px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .contact-icon {
+    flex-shrink: 0;
+    width: 44px; height: 44px;
+    border-radius: 11px;
+    background: rgba(232,163,61,0.15);
+    color: var(--amber);
+    display: grid;
+    place-items: center;
+  }
+  .contact-icon svg { width: 21px; height: 21px; }
+
+  .contact-card h3 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--silver);
+    margin-bottom: 5px;
+  }
+
+  .contact-card .value-lg {
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  a.value-lg:hover { color: var(--amber); }
+
+  .contact-card p { color: var(--silver); font-size: 0.95rem; }
+  .contact-card .hours-row { display: flex; justify-content: space-between; gap: 20px; max-width: 320px; }
+  .contact-card .hours-row + .hours-row { margin-top: 3px; }
+  .contact-card .hours-row span:last-child { color: var(--white); font-weight: 600; }
+
+  .maps-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    color: var(--amber);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  .maps-link:hover { text-decoration: underline; }
+
+  .contact-cta {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  /* ---------- Floating WhatsApp (mobile) ---------- */
+  .fab {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 30;
+    width: 58px; height: 58px;
+    border-radius: 50%;
+    background: var(--wa);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    transition: transform 0.15s ease;
+  }
+  .fab:hover { transform: scale(1.06); }
+  .fab svg { width: 30px; height: 30px; }
+
+  @media (min-width: 720px) { .fab { display: none; } }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 36px 0;
+    text-align: center;
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: var(--silver);
+    font-size: 0.87rem;
+  }
+  footer strong { color: var(--white); }
+  footer .legal { margin-top: 6px; opacity: 0.65; font-size: 0.8rem; }
+  /* bottom breathing room so the FAB never covers footer text on mobile */
+  @media (max-width: 719px) { footer { padding-bottom: 96px; } }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header>
+  <div class="shell header-inner">
+    <a class="brand" href="#top">
+      <img src="assets/logo-white.png" alt="" width="50" height="52">
+      <span class="brand-text">
+        <strong>R&amp;E Beneudys Repuestos</strong>
+        <span>Repuestos para vehículos pesados</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#marcas">Marcas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a class="btn btn-wa header-cta" href="https://wa.me/18097664523" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.47 9.47 0 0 1-4.83-1.32l-.35-.21-3.59.94.96-3.5-.23-.36a9.44 9.44 0 0 1-1.45-5.05c0-5.22 4.26-9.47 9.5-9.47 2.54 0 4.92.99 6.71 2.78a9.4 9.4 0 0 1 2.78 6.7c0 5.22-4.26 9.48-9.49 9.48m8.07-17.55A11.37 11.37 0 0 0 12.04.5C5.75.5.64 5.6.64 11.88c0 2.01.53 3.97 1.53 5.7L.54 23.5l6.06-1.59a11.4 11.4 0 0 0 5.44 1.38h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.19-5.9-3.34-8.05"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="shell">
+    <img class="hero-logo" src="assets/logo-white.png" alt="Emblema de R&E Beneudys Repuestos" width="193" height="200">
+    <h1>Repuestos para camiones y vehículos <em>pesados</em></h1>
+    <p class="lede">Piezas para camiones de carga, volteo y maquinaria pesada. Atención directa en Santo Domingo Oeste, República Dominicana.</p>
+    <div class="hero-actions">
+      <a class="btn btn-amber" href="tel:+18097664523">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        809-766-4523
+      </a>
+      <a class="btn btn-outline" href="https://wa.me/18097664523" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div class="values">
+  <div class="shell values-grid">
+    <div class="value">
+      <span class="value-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </span>
+      <div>
+        <h3>Especializados en pesados</h3>
+        <p>Camiones de carga, volteo y maquinaria. No somos una tienda genérica.</p>
+      </div>
+    </div>
+
+    <div class="value">
+      <span class="value-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </span>
+      <div>
+        <h3>Atención directa</h3>
+        <p>Hablas con nosotros por WhatsApp o teléfono, sin intermediarios.</p>
+      </div>
+    </div>
+
+    <div class="value">
+      <span class="value-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </span>
+      <div>
+        <h3>Fácil de llegar</h3>
+        <p>Sobre la Carretera Sánchez, Km 12, Costa Verde.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="marcas" aria-labelledby="marcas-title">
+  <div class="shell">
+    <p class="section-eyebrow">Marcas</p>
+    <h2 class="section-title" id="marcas-title">Marcas que manejamos</h2>
+    <p class="section-sub">Trabajamos repuestos para las marcas de camión y motor más comunes en el país.</p>
+
+    <div class="brands-grid">
+      <div class="brand-card">
+        <span class="brand-logo"><img src="assets/marcas/shacman.svg" alt="Shacman"></span>
+        <span class="brand-name">Shacman</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-logo"><img src="assets/marcas/sinotruk.png" alt="Sinotruk"></span>
+        <span class="brand-name">Sinotruk</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-logo"><img src="assets/marcas/mack.svg" alt="Mack"></span>
+        <span class="brand-name">Mack</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-logo"><img src="assets/marcas/cummins.svg" alt="Cummins"></span>
+        <span class="brand-name">Cummins</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" aria-labelledby="contacto-title">
+  <div class="shell">
+    <p class="section-eyebrow">Contacto</p>
+    <h2 class="section-title" id="contacto-title">Estamos para ayudarte</h2>
+    <p class="section-sub">Dinos qué repuesto buscas y te decimos si lo tenemos.</p>
+
+    <div class="contact-layout">
+      <div class="contact-card">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <div>
+          <h3>Teléfono</h3>
+          <a class="value-lg" href="tel:+18097664523">809-766-4523</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.47 9.47 0 0 1-4.83-1.32l-.35-.21-3.59.94.96-3.5-.23-.36a9.44 9.44 0 0 1-1.45-5.05c0-5.22 4.26-9.47 9.5-9.47 2.54 0 4.92.99 6.71 2.78a9.4 9.4 0 0 1 2.78 6.7c0 5.22-4.26 9.48-9.49 9.48m8.07-17.55A11.37 11.37 0 0 0 12.04.5C5.75.5.64 5.6.64 11.88c0 2.01.53 3.97 1.53 5.7L.54 23.5l6.06-1.59a11.4 11.4 0 0 0 5.44 1.38h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.19-5.9-3.34-8.05"/></svg>
+        </span>
+        <div>
+          <h3>WhatsApp</h3>
+          <a class="value-lg" href="https://wa.me/18097664523" target="_blank" rel="noopener">809-766-4523</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </span>
+        <div>
+          <h3>Horario</h3>
+          <p class="hours-row"><span>Lunes a Viernes</span><span>8:00am – 6:00pm</span></p>
+          <p class="hours-row"><span>Sábado</span><span>8:00am – 2:00pm</span></p>
+          <p class="hours-row"><span>Domingo</span><span>Cerrado</span></p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <div>
+          <h3>Dirección</h3>
+          <p>Avenida Independencia No. 45, Km 12,<br>Carr. Sánchez, Costa Verde,<br>Santo Domingo Oeste, Rep. Dominicana</p>
+          <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Avenida+Independencia+45+Km+12+Carretera+S%C3%A1nchez+Costa+Verde+Santo+Domingo+Oeste" target="_blank" rel="noopener">
+            Cómo llegar
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-cta">
+      <a class="btn btn-amber" href="tel:+18097664523">Llamar ahora</a>
+      <a class="btn btn-wa" href="https://wa.me/18097664523" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="shell">
+    <p><strong>R&amp;E Beneudys SRL</strong> — Beneudys Repuestos</p>
+    <p class="legal">© 2026 Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/18097664523" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.47 9.47 0 0 1-4.83-1.32l-.35-.21-3.59.94.96-3.5-.23-.36a9.44 9.44 0 0 1-1.45-5.05c0-5.22 4.26-9.47 9.5-9.47 2.54 0 4.92.99 6.71 2.78a9.4 9.4 0 0 1 2.78 6.7c0 5.22-4.26 9.48-9.49 9.48m8.07-17.55A11.37 11.37 0 0 0 12.04.5C5.75.5.64 5.6.64 11.88c0 2.01.53 3.97 1.53 5.7L.54 23.5l6.06-1.59a11.4 11.4 0 0 0 5.44 1.38h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.19-5.9-3.34-8.05"/></svg>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoPartsStore",
+  "name": "R&E Beneudys Repuestos",
+  "legalName": "R&E Beneudys SRL",
+  "description": "Repuestos para camiones y vehículos pesados en Santo Domingo Oeste, República Dominicana.",
+  "telephone": "+1-809-766-4523",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Independencia No. 45, Km 12, Carr. Sánchez, Costa Verde",
+    "addressLocality": "Santo Domingo Oeste",
+    "addressCountry": "DO"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ],
+  "brand": [
+    {"@type": "Brand", "name": "Shacman"},
+    {"@type": "Brand", "name": "Sinotruk"},
+    {"@type": "Brand", "name": "Mack"},
+    {"@type": "Brand", "name": "Cummins"}
+  ]
+}
+</script>
+
+</body>
+</html>

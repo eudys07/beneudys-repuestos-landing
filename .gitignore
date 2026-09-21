@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+._*
+
+# Editor / local tooling
+.vscode/
+.idea/
+.claude/settings.local.json
+
+# Python (scripts de procesamiento de imágenes)
+venv/
+__pycache__/
+*.pyc
+
+# Node (por si se agrega tooling más adelante)
+node_modules/
