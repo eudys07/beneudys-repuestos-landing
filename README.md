@@ -30,7 +30,7 @@ Luego abrir http://localhost:8765
 - Teléfono / WhatsApp: 809-766-4523
 - Correo: rebeneudys@beneudys.com
 - Dirección: Avenida Independencia No. 45, Km 12, Carr. Sánchez, Costa Verde, Santo Domingo Oeste
-- Horario: Lunes a Viernes 8:00am–6:00pm · Sábado 8:00am–2:00pm · Domingo cerrado
+- Horario: Lunes a Viernes 8:00am–6:00pm · Sábado 8:00am–5:00pm · Domingo cerrado
 
 ## Pendiente antes de publicar
 
