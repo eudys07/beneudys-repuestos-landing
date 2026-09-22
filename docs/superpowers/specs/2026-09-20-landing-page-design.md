@@ -41,7 +41,11 @@ Página de presencia de marca en español para "R&E Beneudys SRL" (nombre comerc
 - Teléfono: `tel:+18097664523` · WhatsApp: `https://wa.me/18097664523`.
 - Vista previa local: `python3 -m http.server 8765` (config en `.claude/launch.json`).
 
+## Despliegue
+- Dominio: `https://www.beneudys.com/` (definido en `CNAME`, servido por GitHub Pages).
+  Se refleja en `canonical`, `og:url` y en la propiedad `url` del JSON-LD.
+
 ## Pendientes
-- Dominio real para `canonical` y `og:url` (hoy `beneudysrepuestos.com` es un marcador).
 - Imagen `og:image` propia para compartir en redes.
 - Confirmar si se quieren agregar más marcas a la sección.
+- El logo de Sinotruk es el corporativo del grupo (CNHTC); sustituir si se prefiere la variante verde.
