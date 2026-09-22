@@ -16,11 +16,15 @@ Página de presencia de marca en español para "R&E Beneudys SRL" (nombre comerc
 2. **Hero** — emblema 200px sin placa, titular, bajada y dos CTAs (teléfono visible como texto del botón + WhatsApp).
 3. **Valores** — tres propuestas: especialización en pesados, atención directa, ubicación.
 4. **Marcas** — Shacman, Sinotruk, Mack, Cummins en tarjetas blancas con logo real + nombre.
-5. **Contacto** — teléfono, WhatsApp, horario (tabla día/hora) y dirección con enlace "Cómo llegar" a Google Maps.
+5. **Contacto** — grilla 2×2 agrupada por significado: arriba los canales de contacto (teléfono, correo), abajo la logística (horario, dirección con enlace "Cómo llegar" a Google Maps).
 6. **Footer** — razón social y año. **Sin RNC.**
 7. **FAB de WhatsApp** flotante, solo en móvil (<720px).
 
 ## Decisiones de UX
+- **WhatsApp tiene un único punto de entrada**: el botón flotante, en todas las resoluciones. Es el único disponible sin depender de la posición de scroll.
+- El teléfono aparece en dos lugares con roles distintos: CTA del hero (conversión) y tarjeta de contacto (referencia). No es duplicación: una empuja a la acción, la otra es el listado canónico.
+- El correo va en Contacto, junto al teléfono, nunca arriba: es un canal de baja intención y respuesta lenta, y compitiendo con el CTA le restaría conversión.
+- La jerarquía entre teléfono y correo se expresa con la escala tipográfica (número grande, correo a 1rem), no con el ancho de las tarjetas.
 - El teléfono aparece como texto del botón principal del hero: en móvil es la acción de mayor intención.
 - El emblema se usa con fondo transparente porque su placa navy se fundía con el fondo de la página.
 - Los logos de marca van en tarjetas blancas: son multicolor y no se leen sobre navy.

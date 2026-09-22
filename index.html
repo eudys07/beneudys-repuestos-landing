@@ -367,6 +367,13 @@
   a.value-lg:hover { color: var(--amber); }
   .value-xl { font-size: clamp(1.5rem, 4vw, 2rem); }
 
+  /* long enough to wrap on narrow cards: break-word prefers the <wbr>
+     after the @ over snapping mid-word */
+  .value-email {
+    font-size: 1rem;
+    overflow-wrap: break-word;
+  }
+
   .contact-card p { color: var(--silver); font-size: 0.95rem; }
   .contact-card .hours-row { display: flex; justify-content: space-between; gap: 20px; max-width: 320px; }
   .contact-card .hours-row + .hours-row { margin-top: 3px; }
@@ -536,13 +543,23 @@
     <p class="section-sub">Dinos qué repuesto buscas y te decimos si lo tenemos.</p>
 
     <div class="contact-layout">
-      <div class="contact-card is-wide">
+      <div class="contact-card">
         <span class="contact-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </span>
         <div>
           <h3>Teléfono</h3>
           <a class="value-lg value-xl" href="tel:+18097664523">809-766-4523</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        </span>
+        <div>
+          <h3>Correo</h3>
+          <a class="value-lg value-email" href="mailto:rebeneudys@beneudys.com">rebeneudys@<wbr>beneudys.com</a>
         </div>
       </div>
 
@@ -598,6 +615,7 @@
   "legalName": "R&E Beneudys SRL",
   "description": "Repuestos para camiones y vehículos pesados en Santo Domingo Oeste, República Dominicana.",
   "telephone": "+1-809-766-4523",
+  "email": "rebeneudys@beneudys.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Avenida Independencia No. 45, Km 12, Carr. Sánchez, Costa Verde",
