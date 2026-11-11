@@ -435,6 +435,16 @@
   }
   footer strong { color: var(--white); }
   footer .legal { margin-top: 6px; opacity: 0.65; font-size: 0.8rem; }
+  .social { display: flex; justify-content: center; gap: 12px; margin: 14px 0 10px; }
+  .social a {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 50%;
+    color: var(--silver);
+    border: 1px solid rgba(255,255,255,0.18);
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .social a:hover, .social a:focus-visible { color: var(--white); border-color: var(--white); background: rgba(255,255,255,0.08); }
+  .social svg { width: 18px; height: 18px; }
   /* bottom breathing room so the FAB never covers footer text on mobile */
   @media (max-width: 719px) { footer { padding-bottom: 96px; } }
 </style>
@@ -599,6 +609,14 @@
 <footer>
   <div class="shell">
     <p><strong>R&amp;E Beneudys SRL</strong> — Beneudys Repuestos</p>
+    <div class="social">
+      <a href="https://www.instagram.com/rebeneudysrepuestos/" target="_blank" rel="noopener" aria-label="Instagram de R&amp;E Beneudys Repuestos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61595275582205" target="_blank" rel="noopener" aria-label="Facebook de R&amp;E Beneudys Repuestos">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.53l.38-2.94H13.5V8.69c0-.85.24-1.43 1.46-1.43h1.56V4.63a20.9 20.9 0 0 0-2.27-.12c-2.25 0-3.79 1.37-3.79 3.89v2.17H7.92v2.94h2.54V21h3.04z"/></svg>
+      </a>
+    </div>
     <p class="legal">© 2026 Todos los derechos reservados.</p>
   </div>
 </footer>
@@ -618,6 +636,10 @@
   "description": "Repuestos para camiones y vehículos pesados en Santo Domingo Oeste, República Dominicana.",
   "telephone": "+1-809-766-4523",
   "email": "rebeneudys@beneudys.com",
+  "sameAs": [
+    "https://www.instagram.com/rebeneudysrepuestos/",
+    "https://www.facebook.com/profile.php?id=61595275582205"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Avenida Independencia No. 45, Km 12, Carr. Sánchez, Costa Verde",
